@@ -64,4 +64,3 @@ export default class ChartVis extends Component {
     }
 }
 
-// export default ChartVis;
