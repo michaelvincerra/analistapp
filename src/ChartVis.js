@@ -1,14 +1,22 @@
 import React, { Component } from 'react'
+import rd3 from 'react-d3'
+
 // import Buttons from './Buttons'
 // import YearRange from './YearRange'
 
 /* global fetch */
+const BarChart = rd3.BarChart
 
-const SERVER_ROOT = 'http://api.worldbank.org/'
-const USER_PATH1 = `${SERVER_ROOT}countries/it/indicators//NY.GDP.MKTP.CD?format=json&per_page=500&date=1995:2015`
+const barData = [
+  { label: 'A', value: 5 },
+  { label: 'B', value: 6 },
+  { label: 'F', value: 7 }
+]
+
+const SERVER_ROOT = 'http://localhost:3000/'
+const USER_PATH1 = `${SERVER_ROOT}countries/it/indicators/NY.GDP.MKTP.CD?format=json&per_page=500&date=1975:2015`
 
 export default class ChartVis extends Component {
-  // 30.11.2017. Restart here.
   constructor (props) {
     super(props)
 
@@ -33,16 +41,6 @@ export default class ChartVis extends Component {
       .catch(error => console.log(error))
   }
 
-  componentDidMount () {
-    // This will call the d3 to show the chart
-  }
-
-  d3Function () {
-  }
-
-  italyGDPChart (data) {
-  }
-
   render () {
     // call js functions here
     console.log(this.state.data)
@@ -50,11 +48,19 @@ export default class ChartVis extends Component {
     // chart id is for SVG
       <section className='all_container'>
 
-        <div className='container'>
+        {/* <div className='container'>
           <div id='chart' />
           <div id='slider' />
           <p id='range-label' />
-        </div>
+        </div> */}
+
+        <BarChart
+          data={barData}
+          width={500}
+          height={200}
+          fill={'#3182bd'}
+          title='Bar Chart'
+        />
 
       </section>
 
