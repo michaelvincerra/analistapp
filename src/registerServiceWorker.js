@@ -7,7 +7,8 @@
 
 // To learn more about the benefits of this model, read https://goo.gl/KwvDNy.
 // This link also includes instructions on opting out of this behavior.
-/* global fetch URL */
+/* global fetch */
+/* global URL */
 
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
