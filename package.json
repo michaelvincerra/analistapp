@@ -3,22 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.17.1",
-    "prop-types": "^15.6.0",
+    "create-react-class": "^15.6.2",
+    "d3": "^3.0.0",
+    "highlight.js": "^9.12.0",
+    "material-ui": "^0.20.0",
+    "rd3": "^0.8.1",
     "react": "^16.2.0",
-    "react-d3": "^0.4.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17"
+    "react-scripts": "1.0.17",
+    "react-slider": "^0.9.0"
   },
+  "proxy": "http://api.worldbank.org/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "lint": "eslint src",
-    "lint-fix": "eslint --fix src"
+    "eject": "react-scripts eject", 
+    "eslint": "node_modules/.bin/eslint src", 
+    "eslint-fix": "node_modules/.bin/eslint --fix src"
   },
-  "proxy": "http://api.worldbank.org/",
   "devDependencies": {
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-jsx": "^4.0.2",

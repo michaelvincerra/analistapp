@@ -35,10 +35,10 @@ h1 {
   font-family: 'Exo 2', sans-serif;
   font-weight: bold;
   color: #404f8e; /* 647AD5 404f8e 678EC4*/
-  font-size: 52px;
+  font-size: 48px;
   text-align: center;
   -webkit-text-stroke: 1px #404f8e;
-  text-shadow: 1.25px 1px 1.25px #45879b, 1px 1px 10px #ccc;
+  text-shadow: 1.25px 1px 1.25px #459b94, 1px 1px 10px #ccc;
   margin-top: 10px;
   margin-bottom: -5px
 }
@@ -101,10 +101,11 @@ p  {
   }
 
   
-.wrapper1 {
+.wrapper1 {  
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto;
+  justify-items: center; 
   }
 
 .one {
@@ -116,12 +117,12 @@ p  {
   }
 
 .two {
-  margin-left: 25%;
-  padding: 10px;
   grid-column: 1 ;
   grid-row: 2;
+  align-items: center;
+  padding: 10px;
   width: 50%;
-  height: 95%;
+  height: 100%;
   color: #003973;
   font-size: larger ;
   background-color: #FFFFFF; /* #E5F9FC * For browsers that do not support gradients    06aae0 */
@@ -130,7 +131,7 @@ p  {
   background: -moz-linear-gradient(#ADD8E6, #FFFFFF); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#ADD8E6, #FFFFFF); /* Standard syntax */
   border-radius: 15px;
-  /*opacity: .05;*/
+  /* opacity: .05; */
   }
 
 #range-label{
@@ -153,3 +154,7 @@ p  {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;  
   }  
+
+  .outline {
+    border: .5px dashed green;
+  }

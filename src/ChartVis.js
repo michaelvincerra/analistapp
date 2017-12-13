@@ -1,69 +1,146 @@
 import React, { Component } from 'react'
-import rd3 from 'react-d3'
-
-// import Buttons from './Buttons'
-// import YearRange from './YearRange'
-
 /* global fetch */
-const BarChart = rd3.BarChart
 
-const barData = [
-  { label: 'A', value: 5 },
-  { label: 'B', value: 6 },
-  { label: 'F', value: 7 }
-]
+// import './App.css'
+
+// const React = require('react');
+// const ReactDOM = require('react-dom');
+// const d3 = require('d3');
+// const createReactClass = require('create-react-class');
+const hljs = require('highlight.js')
+const rd3 = require('rd3')
+// const reactSlider = require('react-slider')
+
+const BarChart = rd3.BarChart
+// const LineChart = rd3.LineChart;
+// const CandlestickChart = rd3.CandlestickChart;
+// const PieChart = rd3.PieChart;
+// const AreaChart = rd3.AreaChart;
+// const Treemap = rd3.Treemap;
+// const ScatterChart = rd3.ScatterChart;
+
+hljs.initHighlightingOnLoad()
 
 const SERVER_ROOT = 'http://localhost:3000/'
-const USER_PATH1 = `${SERVER_ROOT}countries/it/indicators/NY.GDP.MKTP.CD?format=json&per_page=500&date=1975:2015`
+const IT_GDP = `${SERVER_ROOT}countries/it/indicators/NY.GDP.MKTP.CD?format=json&per_page=500&date=1995:2016`
+// const IT_GNI = `${SERVER_ROOT}countries/it/indicators/NY.GDP.MKTP.CD?format=json&per_page=500&date=1995:2016`
+// const IT_FDI = `${SERVER_ROOT}countries/it/indicators/BN.KLT.DINV.CD?format=json&per_page=500&date=1995:2015`
 
-export default class ChartVis extends Component {
+export default class RD3 extends Component {
   constructor (props) {
     super(props)
 
     this.state = {
-      data: []
+      data: undefined
     }
+
+    // Use this if other components need to call this bound state
+    this.fetchData = this.fetchData.bind(this)
   }
 
+  // Keep lifecycle hook functions simple and clean
   componentWillMount () {
-    fetch(`${USER_PATH1}`)
+    this.fetchData()
+  }
+
+  fetchData () {
+    fetch(`${IT_GDP}`)
       .then((response) => response.json())
       .then((data) => {
-        const filteredData = data[1].map(function (datapoint, i) {
+        // console.log(data);
+        const filteredData = [
+          {
+            name: data[1][0].country.id,
+            values: []
+          }
+        ]
+        const plotData = data[1].map(function (datapoint, i) {
           return {
-            'id': datapoint.country.id,
-            'year': datapoint.date,
-            'value': datapoint.value
+            'x': datapoint.date,
+            'y': datapoint.value
           }
         })
+        filteredData[0].values = plotData.reverse()
+        console.log(filteredData)
         this.setState({ data: filteredData }) // TODO: Check the JSON response object.
       })
       .catch(error => console.log(error))
   }
 
-  render () {
-    // call js functions here
-    console.log(this.state.data)
+  renderData () {
+  // Following if statement used when state moved to App.js; All children receive  props of parent state.
+  // if(!this.props.data === undefined) {
+  // return statement exits function if data is undefined.
+  //   return
+  // }
+
+    if (this.state.data === undefined) {
+      return
+    }
     return (
-    // chart id is for SVG
-      <section className='all_container'>
-
-        {/* <div className='container'>
-          <div id='chart' />
-          <div id='slider' />
-          <p id='range-label' />
-        </div> */}
-
+      <div className='col-md-6'>
         <BarChart
-          data={barData}
-          width={500}
-          height={200}
-          fill={'#3182bd'}
-          title='Bar Chart'
+          data={this.state.data}
+          width={700}
+          height={432}
+          title='GDP in Italy'
+          yAxisLabel='Trillions'
+          xAxisLabel='Year'
         />
+      </div>)
+  }
+
+  getInitialState () {
+    return {
+    }
+  }
+
+  render () {
+    // const barData = [
+    //   {
+    //     name: 'Series A',
+    //     values: [
+    //       { x: 1, y: 91 },
+    //       { x: 2, y: 290 },
+    //       { x: 3, y: -25 },
+    //     ]
+    //   },
+    //   {
+    //     name: 'Series B',
+    //     values: [
+    //       { x: 1, y: 9 },
+    //       { x: 2, y: 49 },
+    //       { x: 3, y: -20 },
+    //     ]
+    //   },
+    //   {
+    //     name: 'Series C',
+    //     values: [
+    //       { x: 1, y: 14 },
+    //       { x: 2, y: 77 },
+    //       { x: 3, y: -70 },
+    //     ]
+    // }
+    // ];
+
+    return (
+      <section className='all_container' >
+
+        <div className='wrapper1 outline'>
+
+          <h1 className='one center outline'>AnalistApp</h1>
+
+          <div className='two center outline'>
+            {this.renderData()}
+          </div>
+
+          <div />
+
+          {/* <ReactSlider defaultValue={[0, 100]} withBars /> */}
+
+        </div>
 
       </section>
-
     )
   }
-}
+};
