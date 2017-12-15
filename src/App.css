@@ -29,7 +29,6 @@
 
 
 /* My Styles Start Here: */
-
  
 h1 {
   font-family: 'Exo 2', sans-serif;
@@ -42,6 +41,7 @@ h1 {
   margin-top: 10px;
   margin-bottom: -5px
 }
+
 .container {
   width: 50vw;
   margin: auto;
@@ -69,13 +69,12 @@ padding: 8px;
 -moz-border-radius:10px;
 border-radius: 10px;
 align-content: center;
-background: linear-gradient(to top, white, rgba(255,255,255,0)); */
+background: linear-gradient(to top, white, rgba(255,255,255,0)); 
 background: -o-linear-gradient(#F5F5F5, #E8F5F6); /* For Opera 11.1 to 12.0 */
 background: -moz-linear-gradient(#F5F5F5, #E8F5F6); /* For Firefox 3.6 to 15 */
 background: linear-gradient(#F5F5F5, #E8F5F6); /* Standard syntax */
 border-radius: 15px;
 }
-
 
 text {
   font-size: 11px;
