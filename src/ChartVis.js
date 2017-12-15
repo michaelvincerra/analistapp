@@ -56,8 +56,10 @@ export default class ChartVis extends Component {
 
   renderData () {
     if (this.state.data === undefined) {
+      console.log('Yo!')
       return
     }
+    console.log('Data loaded!')
     return (
       <div id='barChart'>
         <BarChart
@@ -69,6 +71,7 @@ export default class ChartVis extends Component {
           yAxisLabel='Trillions'
           xAxisLabel='Year'
           rangeRoundBandsPadding={0.25}
+
           // axesColor={2f7c77}
         />
       </div>)
