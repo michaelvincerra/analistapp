@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './App.css' //
 /* global fetch */
 
 const hljs = require('highlight.js')
@@ -56,23 +57,20 @@ export default class ChartVis extends Component {
 
   renderData () {
     if (this.state.data === undefined) {
-      console.log('Yo!')
+      console.log('Remains undefined!')
       return
     }
     console.log('Data loaded!')
+
     return (
       <div id='barChart'>
         <BarChart
           data={this.state.data}
-          // margins={{top: 100, right: 20, bottom: 40, left: 45}}
           width={700}
           height={432}
           title='GDP in Italy'
           yAxisLabel='Trillions'
           xAxisLabel='Year'
-          rangeRoundBandsPadding={0.25}
-
-          // axesColor={2f7c77}
         />
       </div>)
   }
