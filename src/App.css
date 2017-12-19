@@ -30,6 +30,15 @@
 
 /* My Styles Start Here: */
  
+/* This overrides the default svg in d3 */
+.rd3-chart {
+padding-left: 60px;
+padding-right: 70px;
+/* background: #647AD5;  */
+
+}
+
+
 h1 {
   font-family: 'Exo 2', sans-serif;
   font-weight: bold;
