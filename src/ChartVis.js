@@ -88,7 +88,7 @@ export default class ChartVis extends Component {
 
           <h1 className='one center outline'>AnalistApp</h1>
 
-          <div className='two center outline'>
+          <div className='two outline'>
             {this.renderData()}
           </div>
 
