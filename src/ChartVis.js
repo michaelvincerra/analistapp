@@ -1,67 +1,104 @@
 import React, { Component } from 'react'
-// import Buttons from './Buttons'
-// import YearRange from './YearRange'
+import './App.css' //
+/* global fetch */
 
+const hljs = require('highlight.js')
+const rd3 = require('rd3')
+// const reactSlider = require('react-slider')
 
-const SERVER_ROOT = 'http://api.worldbank.org/'
-const USER_PATH1 = `${SERVER_ROOT}countries/it/indicators//NY.GDP.MKTP.CD?format=json&per_page=500&date=1995:2015`
+const BarChart = rd3.BarChart
 
+hljs.initHighlightingOnLoad()
+
+const SERVER_ROOT = 'http://localhost:3000/'
+const IT_GDP = `${SERVER_ROOT}countries/it/indicators/NY.GDP.MKTP.CD?format=json&per_page=500&date=1995:2016`
 
 export default class ChartVis extends Component {
-    // 30.11.2017. Restart here. 
-    constructor(props) {
-        super(props)
+  constructor (props) {
+    super(props)
 
-        this.state = {
-            data: []
-        }
+    this.state = {
+      data: undefined
     }
+    this.fetchData = this.fetchData.bind(this)
+  }
 
-    componentWillMount () {
-        fetch(`${USER_PATH1}`)
-            .then((response) => response.json())
-            .then((data) => {
-                const filteredData = data[1].map(function(datapoint,i) { 
-                    return {
-                        'id': datapoint.country.id,
-                        'year': datapoint.date,
-                        'value': datapoint.value 
-                    }
-                })
-                this.setState({ data: filteredData }) // TODO: Check the JSON response object. 
-            })
-            .catch(error => console.log(error))
+  componentWillMount () {
+    this.fetchData()
+  }
+
+  fetchData () {
+    fetch(`${IT_GDP}`)
+      .then((response) => response.json())
+      .then((data) => {
+        this.parseData(data)
+        // console.log(data);
+      })
+      .catch(error => console.log(error))
+  }
+
+  parseData (data) {
+    const filteredData = [
+      {
+        name: data[1][0].country.id,
+        values: []
+      }
+    ]
+    const plotData = data[1].map(function (datapoint, i) {
+      return {
+        'x': datapoint.date,
+        'y': datapoint.value
+      }
+    })
+    filteredData[0].values = plotData.reverse()
+    // console.log(filteredData)
+    this.setState({ data: filteredData })
+  }
+
+  renderData () {
+    if (this.state.data === undefined) {
+      console.log('Remains undefined!')
+      return
     }
+    console.log('Data loaded!')
 
-    componentDidMount() {
-        // This will call the d3 to show the chart 
+    return (
+      <div id='barChart'>
+        <BarChart
+          data={this.state.data}
+          width={700}
+          height={432}
+          title='GDP in Italy'
+          yAxisLabel='Trillions'
+          xAxisLabel='Year'
+        />
+      </div>)
+  }
+
+  getInitialState () {
+    return {
     }
+  }
 
-    d3_function() {
-    }
+  render () {
+    return (
+      <section className='all_container' >
 
-    
-    Italy_GDP_Chart(data) {    
-    }
+        <div className='wrapper1 outline'>
 
-    render() {
+          <h1 className='one center outline'>AnalistApp</h1>
 
-        // call js functions here 
-        console.log(this.state.data)
-        return (
-            // chart id is for SVG 
-            <section className="all_container">
+          <div className='two center outline'>
+            {this.renderData()}
+          </div>
 
-                <div className='container'>
-                    <div id='chart'></div>
-                    <div id='slider'></div>
-                    <p id='range-label'></p>
-                </div>
+          <div />
 
-            </section>
+          {/* <ReactSlider defaultValue={[0, 100]} withBars /> */}
 
-        )
-    }
-}
+        </div>
 
-// export default ChartVis;
+      </section>
+    )
+  }
+};

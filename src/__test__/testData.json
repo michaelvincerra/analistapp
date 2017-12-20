@@ -1,0 +1,296 @@
+[
+  {
+    "page": 1,
+    "pages": 1,
+    "per_page": "500",
+    "total": 22
+  },
+  [
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "1849970464191.78",
+      "decimal": "0",
+      "date": "2016"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "1824902219021.73",
+      "decimal": "0",
+      "date": "2015"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "2151732834411.5",
+      "decimal": "0",
+      "date": "2014"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "2130491269673.44",
+      "decimal": "0",
+      "date": "2013"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "2072823111961.1",
+      "decimal": "0",
+      "date": "2012"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "2276292459232.78",
+      "decimal": "0",
+      "date": "2011"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "2125058270201.64",
+      "decimal": "0",
+      "date": "2010"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "2185160158794.11",
+      "decimal": "0",
+      "date": "2009"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "2390729210487.77",
+      "decimal": "0",
+      "date": "2008"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "2203053327128.39",
+      "decimal": "0",
+      "date": "2007"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "1942633841801.53",
+      "decimal": "0",
+      "date": "2006"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "1852661936077.6",
+      "decimal": "0",
+      "date": "2005"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "1798314755525.2",
+      "decimal": "0",
+      "date": "2004"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "1569649631715.58",
+      "decimal": "0",
+      "date": "2003"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "1266510668642.95",
+      "decimal": "0",
+      "date": "2002"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "1162317840447.43",
+      "decimal": "0",
+      "date": "2001"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "1141760021927.4",
+      "decimal": "0",
+      "date": "2000"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "1248563148945.24",
+      "decimal": "0",
+      "date": "1999"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "1266309223820.68",
+      "decimal": "0",
+      "date": "1998"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "1239050936221.01",
+      "decimal": "0",
+      "date": "1997"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "1308929305684.53",
+      "decimal": "0",
+      "date": "1996"
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.CD",
+        "value": "GDP (current US$)"
+      },
+      "country": {
+        "id": "IT",
+        "value": "Italy"
+      },
+      "value": "1170787357066.44",
+      "decimal": "0",
+      "date": "1995"
+    }
+  ]
+]
