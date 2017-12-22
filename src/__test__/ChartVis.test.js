@@ -5,6 +5,7 @@ import Adapter from 'enzyme-adapter-react-16'
 import ChartVis from '../ChartVis'
 import testData from './testData'
 import fetch from 'jest-fetch-mock'
+import Slider from '../../../../../Library/Caches/typescript/2.6/node_modules/@types/rc-slider'
 
 // const wrapper = mount(<BarChart />)
 
@@ -55,3 +56,10 @@ describe('ChartVis', () => {
     expect(expected).toEqual(stateData.data[0].values)
   })
 })
+
+// it('renders a change of years on event onSliderChange', () => {
+//   const event = {target: {value: value }}
+//   app.find('#sliderBar').simulate('change', event)
+//   const years = app.find('???')
+//   expect(value.length).toBe(20)
+// }

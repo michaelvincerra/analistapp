@@ -29,17 +29,6 @@
 
 
 /* My Styles Start Here: */
- 
-/* This overrides the default svg in d3 */
-.rd3-chart {
-/* display: flex; */
-padding-left: 60px;
-padding-right: 70px;
-
-/* background: #647AD5;  */
-
-}
-
 
 h1 {
   font-family: 'Exo 2', sans-serif;
@@ -67,14 +56,10 @@ body {
   background: #ADD8E6;
 }
 
-/* background for the chart */
 .body {
   background: #ADD8E6;
 }
-/* bold {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
-} */
+
 
 
 
@@ -109,7 +94,7 @@ text {
 
 p  {
   font-size: larger;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto: 400', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-variant: normal;
@@ -119,6 +104,8 @@ p  {
 
   
 .wrapper1 {  
+  display: flex;
+  align-content: center;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto;
@@ -128,9 +115,7 @@ p  {
 .one {
   grid-column: 1;
   grid-row: 1;
-  /*border-style: solid;
-  border-width: 1px;
-  opacity: .05;*/
+
   }
 
 .two {
@@ -138,9 +123,8 @@ p  {
   grid-row: 2;
   align-items: center;
   padding: 10px;
-  width: 59%;
+  width: 50%;
   height: 100%;
-  color: #003973;
   font-size: larger ;
   background-color: #FFFFFF; /* #E5F9FC * For browsers that do not support gradients    06aae0 */
   background: -webkit-linear-gradient(#ADD8E6, #FFFFFF); /* For Safari 5.1 to 6.0 */
@@ -148,13 +132,20 @@ p  {
   background: -moz-linear-gradient(#ADD8E6, #FFFFFF); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#ADD8E6, #FFFFFF); /* Standard syntax */
   border-radius: 15px;
-  /* opacity: .05; */
+}
+
+.three{
+  padding-top: 10px;
+  grid-column: 1;
+  grid-row: 3; 
+  align-items: center;
+  height: 80px;
   }
 
 #range-label{
   text-align: center;
   color: #003973 ;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto:100', sans-serif;
   font-weight: 700;    
 }
 
@@ -175,3 +166,61 @@ p  {
   .outline {
     border: .5px dashed green;
   }
+
+.rc-slider-rail {
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%; 
+}
+
+.indicators {
+  display: flex; 
+  flex-direction: row;
+  justify-content:space-around; 
+  align-content: center;  
+}
+  
+/* This overrides the default svg in d3 */
+.rd3-chart {
+  padding-top: 50px; 
+  padding-left: 100px;
+  padding-right: 30px;
+  }
+  
+  .rd3-basic-chart {
+    display: flex;
+    align-content: center;
+  }
+  
+  .button{ 
+    color: #404f8e ;
+    font-size: 15px;
+    line-height: 0.5px;
+    font-family: 'Roboto: 100', sans-serif !important;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    display: table-cell;
+    vertical-align:middle;
+    height: 30px;
+    width: 70px;
+    border-radius: 8px;
+    box-shadow: 0px px 4px -2px rgb(34, 34, 34);
+    background-color:#F5F5F5; /* #E5F9FC *  #2E5966 For browsers that do not support gradients    06aae0 */
+    background: -webkit-linear-gradient(#FFFFFF, #D0D0D0); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FFFFFF, #D0D0D0); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FFFFFF, #D0D0D0); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FFFFFF, #D0D0D0); /* Standard syntax */
+    text-decoration: none;
+
+
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px -2px #333;
+    text-shadow: 0px -1px #333;
+}
+  
+.button:hover{
+	background: linear-gradient(#FFFFFF,#719DBA);
+}
