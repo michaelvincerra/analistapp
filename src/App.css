@@ -115,16 +115,25 @@ p  {
 .one {
   grid-column: 1;
   grid-row: 1;
-
   }
+
+.one-and {
+  grid-column: 1 ;
+  grid-row: 2;
+  margin-top: 10px;
+
+}
+
 
 .two {
   grid-column: 1 ;
-  grid-row: 2;
+  grid-row: 3;
   align-items: center;
   padding: 10px;
-  width: 50%;
-  height: 100%;
+  margin-top: 10px;
+  margin-bottom: -15px;
+  width: 900px;
+  height: 500px;
   font-size: larger ;
   background-color: #FFFFFF; /* #E5F9FC * For browsers that do not support gradients    06aae0 */
   background: -webkit-linear-gradient(#ADD8E6, #FFFFFF); /* For Safari 5.1 to 6.0 */
@@ -135,9 +144,9 @@ p  {
 }
 
 .three{
-  padding-top: 10px;
+  padding-top: -10px;
   grid-column: 1;
-  grid-row: 3; 
+  grid-row: 4; 
   align-items: center;
   height: 80px;
   }
@@ -223,4 +232,10 @@ p  {
   
 .button:hover{
 	background: linear-gradient(#FFFFFF,#719DBA);
+}
+
+barChart {
+ font-family: 'Roboto: 400', sans-serif;
+ text-align: center; 
+ font-size: 20px;
 }

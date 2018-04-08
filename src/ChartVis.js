@@ -3,7 +3,15 @@ import './App.css' //
 import SliderBar from './SliderBar'
 /* global fetch */
 
-const style = { width: 600, margin: 50 }
+/*
+TODO:
+Add separate countries
+Add pie chart
+Select new color for chart
+Check to see if chart can use negative values.
+*/
+
+const style = { width: 800, margin: 50 }
 const hljs = require('highlight.js')
 const rd3 = require('rd3')
 const BarChart = rd3.BarChart
@@ -74,13 +82,15 @@ export default class ChartVis extends Component {
     console.log('Data loaded!')
 
     return (
+
       <div id='barChart'>
         <BarChart
           data={this.state.data}
           width={700}
           height={432}
-          yAxisLabel='&nbsp;&nbsp;&nbsp;Trillions'
-          xAxisLabel='Year'
+          // title={'Italy'}
+          yAxisLabel='&nbsp;&nbsp;&nbsp; Trillions'
+          xAxisLabel='Italy'
         />
       </div>)
   }
@@ -102,7 +112,7 @@ export default class ChartVis extends Component {
         <div className='wrapper1'>
 
           <h1 className='one center '>AnalistApp</h1>
-
+          {/* <div className='one-and'> Italy</div> */}
           <div className='two'>
             {this.renderData()}
           </div>
