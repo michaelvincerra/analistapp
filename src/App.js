@@ -5,9 +5,9 @@ import './App.css' // This Styles import statement governs the entire app
 class App extends Component {
   render () {
     return (
-
-      <ChartVis />
-
+      <div>
+        <ChartVis />
+      </div>
     )
   }
 }
